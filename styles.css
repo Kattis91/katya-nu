@@ -107,6 +107,19 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 .accent-text {
     color: #E8A298;
     font-weight: bold;
