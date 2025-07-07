@@ -84,6 +84,34 @@ main {
     margin: 0 auto;
 }
 
+/* About Section */
+#about {
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #5A9B8E;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.accent-text {
+    color: #E8A298;
+    font-weight: bold;
+}
+
 section {
     padding: 2rem 0;
     min-height: 400px;
