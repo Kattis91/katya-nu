@@ -222,6 +222,18 @@ main {
     display: inline-block;
 }
 
+.project-card:nth-child(even) .project-content {
+    grid-template-columns: 300px 1fr;
+}
+
+.project-card:nth-child(even) .project-info {
+    order: 2;
+}
+
+.project-card:nth-child(even) .project-image {
+    order: 1;
+}
+
 /* Contact Section */
 #contact {
     background: #2C2C2C;
