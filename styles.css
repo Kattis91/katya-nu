@@ -177,7 +177,7 @@ main {
 }
 
 .project-info h3 {
-    color: #5A9B8E;
+    color: white;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -190,11 +190,19 @@ main {
 }
 
 .project-info-catch {
-    margin-bottom: 1.5rem;
-    color: #E8A298;
-    font-size: 1.5rem;
-    line-height: 1.6;
-    font-style: italic;
+  animation: pulseStronger 4s ease-in-out infinite;
+  color: #2a7ae2;
+}
+
+@keyframes pulseStronger {
+  0%, 100% {
+    opacity: 1;
+    color: #2a7ae2;
+  }
+  50% {
+    opacity: 0.5;
+    color: #1a5bb8; /* mörkare blå */
+  }
 }
 
 .project-tags {
