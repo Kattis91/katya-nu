@@ -262,8 +262,79 @@ h1, h2 {
     .nav-links li {
         padding: 0.5rem 0;
     }
-   .about-content {
+
+    /* Adjust main margin for smaller header */
+    main {
+        margin-top: 60px;
+    }
+
+    /* Hero Section Mobile Typography */
+    #home h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    #home p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* About Section Mobile Typography */
+    .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
     }
+    
+    .about-text h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    /* Projects Section Mobile Typography */
+    .projects-content h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-card p {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Contact Section Mobile Typography */
+    .contact-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    } 
 }
