@@ -145,6 +145,7 @@ main {
 /* Projects Section */
 #projects {
     background: #1A1A1A;
+    padding: 4rem 0;
 }
 
 .projects-content h2 {
@@ -154,30 +155,24 @@ main {
     text-align: center;
 }
 
-.projects-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.project-card {
-    background: #2C2C2C;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-content {
+.project-item {
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0;
+}
+
+.project-item:nth-child(even) {
+    grid-template-columns: 300px 1fr;
+}
+
+.project-item:nth-child(even) .project-info {
+    order: 2;
+}
+
+.project-item:nth-child(even) .project-image {
+    order: 1;
 }
 
 .project-info h3 {
@@ -220,18 +215,6 @@ main {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     display: inline-block;
-}
-
-.project-card:nth-child(even) .project-content {
-    grid-template-columns: 300px 1fr;
-}
-
-.project-card:nth-child(even) .project-info {
-    order: 2;
-}
-
-.project-card:nth-child(even) .project-image {
-    order: 1;
 }
 
 /* Contact Section */
