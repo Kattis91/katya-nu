@@ -155,33 +155,45 @@ main {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .project-card {
     background: #2C2C2C;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
-    background: #2C2C2C;
-    border: 1px solid #404040;
-    color: #E8E8E8;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 }
 
-.project-card h3 {
-    color: #5A9B8E;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
 }
 
-.project-card p {
+.project-info h3 {
+    color: #5A9B8E;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-info p {
+    margin-bottom: 1.5rem;
+    color: #E8E8E8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.project-tags {
     margin-bottom: 1.5rem;
 }
 
@@ -206,6 +218,8 @@ main {
     border-radius: 20px;
     font-size: 0.9rem;
     margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
 }
 
 /* Contact Section */
