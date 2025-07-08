@@ -337,4 +337,40 @@ h1, h2 {
         padding: 12px 25px;
         font-size: 1rem;
     } 
+
+    /* Extra small screens (phones in portrait) */
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 10px;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+        }
+        
+        #home h1 {
+            font-size: 1.8rem;
+        }
+        
+        #home p {
+            font-size: 1rem;
+        }
+        
+        .about-text h2,
+        .projects-content h2,
+        .contact-content h2 {
+            font-size: 1.8rem;
+        }
+        
+        .project-card {
+            padding: 1rem;
+        }
+        
+        .project-tag {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+    }
 }
