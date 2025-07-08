@@ -189,6 +189,14 @@ main {
     line-height: 1.6;
 }
 
+.project-info-catch {
+    margin-bottom: 1.5rem;
+    color: #E8A298;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
 .project-tags {
     margin-bottom: 1.5rem;
 }
