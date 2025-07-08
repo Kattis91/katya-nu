@@ -131,10 +131,11 @@ main {
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
+    width: 450px;
+    height: 439px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
 .accent-text {
@@ -328,6 +329,13 @@ h1, h2 {
     .about-text p {
         font-size: 1rem;
         margin-bottom: 1.2rem;
+    }
+
+    .about-image img {
+        width: min(350px, 85vw);
+        height: auto;
+        aspect-ratio: 450/439;
+        max-height: 60vh;
     }
 
     /* Projects Section Mobile Typography */
