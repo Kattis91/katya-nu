@@ -185,6 +185,20 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.project-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    width: 250px;
+    height: 485px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
 .project-tag {
     background: #E8A298;
     color: white;
