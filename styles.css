@@ -329,6 +329,7 @@ h1, h2 {
         font-size: 1rem;
         margin-bottom: 1.2rem;
     }
+
     /* Projects Section Mobile Typography */
     .projects-content h2 {
         font-size: 2rem;
@@ -340,18 +341,23 @@ h1, h2 {
         gap: 1.5rem;
     }
     
-    .project-card {
-        padding: 1.5rem;
+    .project-item,
+    .project-item:nth-child(even) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
     }
-    
-    .project-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
+
+    .project-item:nth-child(even) .project-info,
+    .project-item:nth-child(even) .project-image {
+        order: unset;
     }
-    
-    .project-card p {
-        font-size: 0.95rem;
-        margin-bottom: 1.2rem;
+
+    .project-image img {
+        width: min(280px, 80vw);
+        height: auto;
+        aspect-ratio: 250/485;
+        max-height: 70vh;
     }
 
     /* Contact Section Mobile Typography */
@@ -396,8 +402,12 @@ h1, h2 {
             font-size: 1.8rem;
         }
         
-        .project-card {
-            padding: 1rem;
+        .project-image img {
+            width: min(220px, 75vw);
+        }
+        
+        .projects-grid {
+            gap: 3rem;
         }
         
         .project-tag {
