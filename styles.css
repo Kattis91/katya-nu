@@ -383,42 +383,70 @@ main {
     color: #E8A298;
 }
 
-.modal-section {
-  margin-bottom: 2rem;
-}
-
-.modal-section h3 {
-    color: #E8A298;
-    font-size: 1.3rem;
+.tab-navigation {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    background-color: #333;
+    border-bottom: 1px solid #444;
+    overflow-x: auto;
 }
 
-.modal-section ul {
+.tab-btn {
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: #ffffff;
+    background-color: #404040;
+}
+
+.tab-btn.active {
+    color: #E8A298;
+    border-bottom-color: #E8A298;
+    background-color: #404040;
+}
+
+.tab-content {
+    padding: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-panel ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-panel li {
+    margin-bottom: 15px;
     padding-left: 0;
+    line-height: 1.6;
 }
 
-.modal-section li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #333;
+.tab-panel li strong {
+    color: #5fb3a3;
 }
 
-.modal-section li:last-child {
-    border-bottom: none;
-}
-
-.modal-section li strong {
-    color: #5A9B8E;
-}
-
-.modal-section li:last-child {
-    border-bottom: none;
-}
-
-.modal-section li strong {
-    color: #5A9B8E;
+.tab-panel p {
+    line-height: 1.6;
+    margin: 0;
 }
 
 

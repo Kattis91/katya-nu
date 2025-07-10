@@ -153,42 +153,47 @@
 </main>
 
 <!-- Modal for FreshAlert -->
-<div id="freshalert-modal" class="modal">
+<div id="freshalert-modal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="modal-header">
             <h2 class="modal-title">FreshAlert</h2>
             <button class="close-btn" onclick="closeModal('freshalert')">&times;</button>
         </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('features')">🚀 Key Features</button>
+            <button class="tab-btn" onclick="switchTab('audience')">🎯 Target Audience</button>
+            <button class="tab-btn" onclick="switchTab('technical')">💻 Technical</button>
+            <button class="tab-btn" onclick="switchTab('impact')">✨ Project Impact</button>
+        </div>
         
-        <div class="modal-section">
-            <h3>🚀 Key Features</h3>
-            <ul>
-                <li><strong>Quick food entry:</strong> Add products in seconds – enter name, expiration date, and category.</li>
-                <li><strong>Smart filtering:</strong> Easily sort by expiry date, category, or search term.</li>
-                <li><strong>Friendly reminders:</strong> Get notified before food goes bad.</li>
-                <li><strong>Eco-friendly focus:</strong> Helps users reduce waste and live more sustainably.</li>
-                <li><strong>Trash bin for expired products:</strong> Keeps your digital fridge tidy and up to date.</li>
-            </ul>
-        </div>
+        <div class="tab-content">
+            <div id="features" class="tab-panel active">
+                <ul>
+                    <li><strong>Quick food entry:</strong> Add products in seconds – enter name, expiration date, and category.</li>
+                    <li><strong>Smart filtering:</strong> Easily sort by expiry date, category, or search term.</li>
+                    <li><strong>Friendly reminders:</strong> Get notified before food goes bad.</li>
+                    <li><strong>Eco-friendly focus:</strong> Helps users reduce waste and live more sustainably.</li>
+                    <li><strong>Trash bin for expired products:</strong> Keeps your digital fridge tidy and up to date.</li>
+                </ul>
+            </div>
 
-        <div class="modal-section">
-            <h3>🎯 Target Audience</h3>
-            <p>Designed for busy families, eco-conscious users, students – anyone who wants to keep better track of what's in the fridge and avoid unnecessary food waste.</p>
-        </div>
+            <div id="audience" class="tab-panel">
+                <p>Designed for busy families, eco-conscious users, students – anyone who wants to keep better track of what's in the fridge and avoid unnecessary food waste.</p>
+            </div>
 
-        <div class="modal-section">
-            <h3>💻 Technical Implementation</h3>
-            <ul>
-                <li><strong>Cross-platform:</strong> Built with React Native for iOS and Android</li>
-                <li><strong>Local storage:</strong> Secure data persistence using AsyncStorage</li>
-                <li><strong>Push notifications:</strong> Expo Notifications for timely reminders</li>
-                <li><strong>Smooth navigation:</strong> React Navigation for seamless user experience</li>
-            </ul>
-        </div>
+             <div id="technical" class="tab-panel">
+                <ul>
+                    <li><strong>Cross-platform:</strong> Built with React Native for iOS and Android</li>
+                    <li><strong>Local storage:</strong> Secure data persistence using AsyncStorage</li>
+                    <li><strong>Push notifications:</strong> Expo Notifications for timely reminders</li>
+                    <li><strong>Smooth navigation:</strong> React Navigation for seamless user experience</li>
+                </ul>
+            </div>
 
-        <div class="modal-section">
-            <h3>✨ Project Impact</h3>
-            <p>FreshAlert makes it easy to keep your food fresh and your home smarter. A small app with a big impact – keep it fresh, keep it safe. By helping users track expiration dates, the app contributes to reducing food waste and promoting sustainable living habits.</p>
+            <div id="impact" class="tab-panel">
+                <p>FreshAlert makes it easy to keep your food fresh and your home smarter. A small app with a big impact – keep it fresh, keep it safe. By helping users track expiration dates, the app contributes to reducing food waste and promoting sustainable living habits.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -203,6 +208,22 @@
     function closeMobileMenu() {
         const navLinks = document.getElementById('navLinks');
         navLinks.classList.remove('active');
+    }
+
+    function switchTab(tabId) {
+        // Remove active class from all tab buttons
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Remove active class from all tab panels
+        const tabPanels = document.querySelectorAll('.tab-panel');
+        tabPanels.forEach(panel => panel.classList.remove('active'));
+        
+        // Add active class to clicked tab button
+        event.target.classList.add('active');
+        
+        // Show corresponding tab panel
+        document.getElementById(tabId).classList.add('active');
     }
 
     function openModal(projectId) {
