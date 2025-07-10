@@ -396,7 +396,7 @@ main {
     border: none;
     color: #ccc;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     white-space: nowrap;
     border-bottom: 3px solid transparent;
@@ -419,6 +419,7 @@ main {
     padding: 30px;
     max-height: 400px;
     overflow-y: auto;
+    font-size: 15px;
 }
 
 .tab-panel {
@@ -620,7 +621,7 @@ h1, h2 {
     
     .tab-btn {
         padding: 15px 20px;
-        font-size: 14px;
+        font-size: 15px;
         border-bottom: none;
         border-left: 3px solid transparent;
         text-align: left;
@@ -691,6 +692,10 @@ h1, h2 {
         .tab-btn {
             padding: 12px 15px;
             font-size: 13px;
+        }
+
+        .tab-content {
+            font-size: 12px;
         }
     }
 }
