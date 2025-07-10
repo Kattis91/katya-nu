@@ -287,9 +287,9 @@ main {
 }
 
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
-    z-index: 2000;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -301,7 +301,6 @@ main {
     align-items: center;
     animation: fadeIn 0.3s ease-out;
     transition: opacity 0.3s ease-out;
-    opacity: 0;
 }
 
 .modal.active {
@@ -347,10 +346,11 @@ main {
     color: #f3f3f3;
     border-radius: 20px;
     padding: 2rem;
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow: hidden;
+    position: relative;
     box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     transform-style: preserve-3d;
     animation: flipIn 0.6s ease-out;
@@ -387,7 +387,7 @@ main {
     display: flex;
     background-color: #333;
     border-bottom: 1px solid #444;
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .tab-btn {
@@ -401,6 +401,7 @@ main {
     white-space: nowrap;
     border-bottom: 3px solid transparent;
     transition: all 0.3s ease;
+    flex: 1;
 }
 
 .tab-btn:hover {
@@ -600,6 +601,36 @@ h1, h2 {
         max-height: 70vh;
     }
 
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .tab-content {
+        padding: 20px;
+    }
+    
+    .tab-navigation {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        padding: 15px 20px;
+        font-size: 14px;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        text-align: left;
+    }
+    
+    .tab-btn.active {
+        border-left-color: #5fb3a3;
+        border-bottom-color: transparent;
+    }
+
     /* Contact Section Mobile Typography */
     .contact-content h2 {
         font-size: 2rem;
@@ -655,6 +686,11 @@ h1, h2 {
             padding: 0.2rem 0.6rem;
             margin-bottom: 0.5rem;
             display: inline-block;
+        }
+
+        .tab-btn {
+            padding: 12px 15px;
+            font-size: 13px;
         }
     }
 }
