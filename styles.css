@@ -245,6 +245,29 @@ main {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
+.phone-mockup {
+    position: relative;
+    width: 250px;
+    height: 485px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 .project-image {
     display: flex;
     justify-content: center;
