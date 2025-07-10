@@ -43,6 +43,10 @@ nav {
 }
 
 .logo {
+    background: linear-gradient(45deg, #5A9B8E, #E8A298);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -136,6 +140,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .accent-text {
