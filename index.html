@@ -12,6 +12,7 @@
         <nav class="container">
             <div class="logo">Katya Durneva Svedmark</div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-overlay" id="navOverlay"></div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
                 <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
@@ -223,12 +224,20 @@
 
     function toggleMobileMenu() {
         const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+
         navLinks.classList.toggle('active');
+        navOverlay.classList.toggle('active');
     }
+
+    document.getElementById('navOverlay').addEventListener('click', toggleMobileMenu);
 
     function closeMobileMenu() {
         const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+
         navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
     }
 
     function switchTab(tabId) {
