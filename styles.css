@@ -226,7 +226,7 @@ main {
     border: none;
     padding: 8px 32px;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 525;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -234,6 +234,7 @@ main {
     display: inline-block;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .cta-button::before {
@@ -771,7 +772,9 @@ h1, h2 {
     
     .cta-button, .cta-secondary {
         width: 100%;
-        max-width: 250px;
+        max-width: 180px;
+        padding: 4px 16px;
+        font-size: 1rem;
     }
             
     /* About Section Mobile Typography */
