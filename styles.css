@@ -689,22 +689,24 @@ h1, h2 {
         display: block;
     }     
     .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        top: 0;
         right: 0;
-        background: #5A9B8E;
+        height: 100vh;
+        width: 250px;
+        background: #2C2C2C;
         flex-direction: column;
         gap: 0;
-        padding: 1rem;
-        transform: translateY(-100%);
-        opacity: 0;
+        padding: 2rem 1rem;
+        transform: translateX(100%);
+        opacity: 1;
         visibility: hidden;
         transition: all 0.3s ease;
+        z-index: 1000;
     }
+
     .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateX(0);
         visibility: visible;
     }
     .nav-links li {
