@@ -84,49 +84,49 @@ main {
 /* Hero Section */
 
 #home {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blobs {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
 }
 
 .blob {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle at 30% 30%, #00bfa6, #004d40);
-  opacity: 0.35;
-  border-radius: 33% 67% 67% 33% / 33% 33% 67% 67%;
-  animation: blobMove 5s infinite ease-in-out alternate;
-  filter: blur(100px);
-  top: 20%;
-  left: 10%;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at 30% 30%, #00bfa6, #004d40);
+    opacity: 0.35;
+    border-radius: 33% 67% 67% 33% / 33% 33% 67% 67%;
+    animation: blobMove 5s infinite ease-in-out alternate;
+    filter: blur(100px);
+    top: 20%;
+    left: 10%;
 }
 
 .blob2 {
-  background: radial-gradient(circle at 70% 70%, #ff4081, #880e4f);
-  top: 60%;
-  left: 60%;
-  animation-delay: 4s;
+    background: radial-gradient(circle at 70% 70%, #ff4081, #880e4f);
+    top: 60%;
+    left: 60%;
+    animation-delay: 4s;
 }
 
 .blob3 {
-  background: radial-gradient(circle at 50% 50%, #448aff, #0d47a1);
-  top: 40%;
-  left: 80%;
-  animation-delay: 8s;
+    background: radial-gradient(circle at 50% 50%, #448aff, #0d47a1);
+    top: 40%;
+    left: 80%;
+    animation-delay: 8s;
 }
 
 @keyframes blobMove {
@@ -152,23 +152,46 @@ main {
   }
 }
 
-#home h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: white;
+.home-greeting {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-#home p {
-    font-size: 1.4rem;
-    color: white;
-    margin-bottom: 2rem;
+.home-name {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #00bfa6, #ff4081);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.home-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #E8E8E8;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .home-content {
     position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 120px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 120px;
 }
 
 .tech-stack {
@@ -653,16 +676,18 @@ h1, h2 {
     }
 
     /* Hero Section Mobile Typography */
-    #home h1 {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
-    }
-    
-    #home p {
-        font-size: 1.1rem;
-        margin-bottom: 1.5rem;
+    .home-name {
+        font-size: 2.5rem;
     }
 
+    .home-title {
+        font-size: 1.4rem;
+    }
+    
+    .home-description {
+        font-size: 1rem;
+    }
+    
     /* About Section Mobile Typography */
     .about-content {
         grid-template-columns: 1fr;
@@ -775,12 +800,8 @@ h1, h2 {
             font-size: 1.2rem;
         }
         
-        #home h1 {
-            font-size: 1.8rem;
-        }
-        
-        #home p {
-            font-size: 1rem;
+        .home-name {
+            font-size: 2rem;
         }
         
         .about-text h2,
