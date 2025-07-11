@@ -82,7 +82,6 @@ main {
 }
 
 /* Hero Section */
-
 #home {
     position: relative;
     overflow: hidden;
@@ -204,16 +203,15 @@ main {
 }
 
 .tech-badge {
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+    color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    }
 
 /* About Section */
 #about {
@@ -687,7 +685,16 @@ h1, h2 {
     .home-description {
         font-size: 1rem;
     }
+
+    .tech-stack {
+        gap: 8px;
+    }
     
+    .tech-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+            
     /* About Section Mobile Typography */
     .about-content {
         grid-template-columns: 1fr;
@@ -802,6 +809,10 @@ h1, h2 {
         
         .home-name {
             font-size: 2rem;
+        }
+        
+        .tech-stack {
+            justify-content: center;
         }
         
         .about-text h2,
