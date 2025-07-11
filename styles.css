@@ -152,8 +152,6 @@ main {
   }
 }
 
-
-
 #home h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -171,6 +169,27 @@ main {
   z-index: 1;
   text-align: center;
   padding-top: 120px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.tech-badge {
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
