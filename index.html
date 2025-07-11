@@ -43,7 +43,7 @@
                 <span class="tech-badge firebase">Firebase</span>
             </div>
             <div class="home-cta">
-                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="javascript:void(0)" onclick="scrollToProjects()" class="cta-button">View My Work</a>           
             </div>
         </div>
     </section>
@@ -215,6 +215,12 @@
 
 <!-- JavaScript for mobile menu -->
 <script>
+    function scrollToProjects() {
+        document.getElementById('projects').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
     function toggleMobileMenu() {
         const navLinks = document.getElementById('navLinks');
         navLinks.classList.toggle('active');
@@ -277,6 +283,18 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.remove('active');
         }
+    });
+
+    // Force page to load at top
+    window.addEventListener('load', function() {
+        // Remove any hash from URL
+        if (window.location.hash) {
+            history.replaceState(null, null, window.location.pathname);
+        }
+        // Force scroll to top
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 100);
     });
 </script>
 </body>
