@@ -986,11 +986,22 @@ h1, h2 {
         margin-bottom: 1.2rem;
     }
 
+    .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
     .about-image img {
-        width: min(350px, 85vw);
+        width: min(300px, 90vw);
         height: auto;
-        aspect-ratio: 450/439;
-        max-height: 60vh;
+        aspect-ratio: 1;
+        max-height: 300px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto
     }
 
     /* Projects Section Mobile Typography */
@@ -1112,6 +1123,15 @@ h1, h2 {
         .projects-content h2,
         .contact-content h2 {
             font-size: 1.8rem;
+        }
+
+        .about-image {
+            padding: 0 0.5rem;
+        }
+        
+        .about-image img {
+            width: min(250px, 85vw);
+            max-height: 250px;
         }
         
         .project-image img {
