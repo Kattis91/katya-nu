@@ -168,7 +168,7 @@
                         <p>Get in touch directly for quick responses</p>
                         <div class="contact-info">katya.svedmark@gmail.com</div>
                     </a>
-                    <div class="contact-method">
+                    <div class="contact-method" onclick="showContactForm()">
                         <h3>💬 Send Message</h3>
                         <p>Prefer a contact form? Fill out your details</p>
                         <div class="contact-info">Contact Form</div>
@@ -273,7 +273,7 @@
     </div>
 </div>
 
-<!-- JavaScript for mobile menu -->
+
 <script>
     function scrollToProjects() {
         document.getElementById('projects').scrollIntoView({
@@ -364,6 +364,21 @@
             window.scrollTo(0, 0);
         }, 100);
     });
+
+    function showContactForm() {
+        const form = document.getElementById('contactForm');
+        form.classList.add('active');
+        
+        // Smooth scroll to form
+        setTimeout(() => {
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
+
+    function hideContactForm() {
+        const form = document.getElementById('contactForm');
+        form.classList.remove('active');
+    }
 </script>
 </body>
 </html>

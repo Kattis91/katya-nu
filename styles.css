@@ -757,6 +757,7 @@ main {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    display: none;
 }
 
 .contact-form.active {
