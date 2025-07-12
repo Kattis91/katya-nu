@@ -913,6 +913,11 @@ h1, h2 {
         font-size: 1rem;
         margin-bottom: 1.5rem;
     }
+
+    .contact-methods {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
     
     .btn {
         width: 100%;
