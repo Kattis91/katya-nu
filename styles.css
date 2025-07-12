@@ -599,7 +599,7 @@ main {
     padding: 30px;
     max-height: 400px;
     overflow-y: auto;
-    font-size: 15px;
+    font-size: 1.1rem;
 }
 
 .tab-panel {
@@ -1078,6 +1078,7 @@ h1, h2 {
     
     .tab-content {
         padding: 20px;
+        font-size: 1rem;
     }
     
     .tab-navigation {
@@ -1086,7 +1087,7 @@ h1, h2 {
     
     .tab-btn {
         padding: 15px 20px;
-        font-size: 15px;
+        font-size: 16px;
         border-bottom: none;
         border-left: 3px solid transparent;
         text-align: left;
@@ -1195,11 +1196,11 @@ h1, h2 {
 
         .tab-btn {
             padding: 12px 15px;
-            font-size: 13px;
+            font-size: 1rem;
         }
 
         .tab-content {
-            font-size: 12px;
+            font-size: 0.9rem;
         }
     }
 }
