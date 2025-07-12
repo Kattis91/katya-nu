@@ -966,9 +966,14 @@ h1, h2 {
     }
 
     .contact-methods {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
     
     .btn {
         width: 100%;
