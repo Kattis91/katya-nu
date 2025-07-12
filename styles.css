@@ -724,6 +724,29 @@ main {
     box-shadow: 0 5px 15px rgba(90, 155, 142, 0.2);
 }
 
+.divider {
+    text-align: center;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.divider span {
+    background: #2C2C2C;
+    padding: 0 2rem;
+    color: white;
+    font-weight: 500;
+}
+
 .btn {
     background: #E8A298;
     color: white;
