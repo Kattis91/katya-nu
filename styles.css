@@ -995,13 +995,16 @@ h1, h2 {
     }
 
     .about-image img {
-        width: min(300px, 90vw);
+        width: min(280px, 80vw);
         height: auto;
+        max-width: 280px;
+        max-height: 280px;
         aspect-ratio: 1;
-        max-height: 300px;
         border-radius: 50%;
+        object-fit: cover;
         display: block;
-        margin: 0 auto
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     /* Projects Section Mobile Typography */
@@ -1025,6 +1028,14 @@ h1, h2 {
     .project-item:nth-child(even) .project-info,
     .project-item:nth-child(even) .project-image {
         order: unset;
+    }
+
+    .project-actions {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        justify-content: center;
     }
 
     .project-image {
