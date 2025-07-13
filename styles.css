@@ -1002,10 +1002,11 @@ h1, h2 {
         aspect-ratio: 1;
         border-radius: 50%;
         object-fit: cover;
-        display: block;
+        display: block !important;
         margin: 0 auto;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        background-color: #333;
+        background-color: #444; /* Shows if image doesn't load */
+        border: 2px solid #555;
     }
 
     /* Projects Section Mobile Typography */
