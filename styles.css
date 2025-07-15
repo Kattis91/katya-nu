@@ -284,15 +284,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-height: 300px;
 }
 
 .about-image img {
-    width: 450px;
-    height: 439px;
-    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     object-fit: cover;
-    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
 }
 
 .accent-text {
@@ -987,26 +993,15 @@ h1, h2 {
     }
 
     .about-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 0 1rem;
+        padding: 1rem;
+        min-height: 280px;
     }
-
+    
     .about-image img {
-        width: min(280px, 80vw);
-        height: auto;
+        width: min(280px, 70vw);
+        height: min(280px, 70vw);
         max-width: 280px;
         max-height: 280px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block !important;
-        margin: 0 auto;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        background-color: #444; /* Shows if image doesn't load */
-        border: 2px solid #555;
     }
 
     /* Projects Section Mobile Typography */
@@ -1162,12 +1157,15 @@ h1, h2 {
         }
 
         .about-image {
-            padding: 0 0.5rem;
+            padding: 0.5rem;
+            min-height: 250px;
         }
         
         .about-image img {
-            width: min(250px, 85vw);
-            max-height: 250px;
+            width: min(240px, 80vw);
+            height: min(240px, 80vw);
+            max-width: 240px;
+            max-height: 240px;
         }
         
         .project-image {
