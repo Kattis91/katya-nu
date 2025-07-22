@@ -97,7 +97,7 @@
                         <div class="project-info">
                             <h3>PunchSync</h3>
                             <p class="project-info-catch">Say goodbye to chaotic schedules and missed check-ins — PunchSync brings order to your workforce with just a few taps.</p>
-                            <p>PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team.</p>
+                            <p>PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team.. <p style="cursor: pointer; color: #2a7ae2;" onclick="openModal('punchsync')">Read more →</p> 
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Swift</span>
@@ -268,6 +268,51 @@
 
             <div id="impact" class="tab-panel">
                 <p>FreshAlert makes it easy to keep your food fresh and your home smarter. A small app with a big impact – keep it fresh, keep it safe. By helping users track expiration dates, the app contributes to reducing food waste and promoting sustainable living habits.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for PunchSync -->
+<div id="punchsync-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">PunchSync</h2>
+            <button class="close-btn" onclick="closeModal('punchsync')">&times;</button>
+        </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('features-punchsync')">🚀 Key Features</button>
+            <button class="tab-btn" onclick="switchTab('audience-punchsync')">🎯 Target Audience</button>
+            <button class="tab-btn" onclick="switchTab('technical-punchsync')">💻 Technical</button>
+            <button class="tab-btn" onclick="switchTab('impact-punchsync')">✨ Project Impact</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="features-punchsync" class="tab-panel active">
+                <ul>
+                    <li><strong>Shift scheduling:</strong> Create and manage employee work schedules in minutes.</li>
+                    <li><strong>Attendance tracking:</strong> Check-in/check-out system to log employee work hours.</li>
+                    <li><strong>Differentiated roles:</strong> Admins can schedule shifts and monitor attendance; employees can view schedules, check in/out, and apply for leave.</li>
+                    <li><strong>Workforce overview:</strong> Real-time visibility into employee availability and status.</li>
+                </ul>
+            </div>
+
+            <div id="audience-punchsync" class="tab-panel">
+                <p>Perfect for small business owners, team leaders, and HR managers who want an efficient way to handle employee scheduling, attendance, and reporting — without the hassle of spreadsheets or manual logs.</p>
+            </div>
+
+            <div id="technical-punchsync" class="tab-panel">
+                <ul>
+                    <li><strong>Native development:</strong> Built entirely in Swift for optimal performance on iOS, with plans to expand to Kotlin for Android support.</li>
+                    <li><strong>User authentication:</strong> Secure login with Firebase Authentication.</li>
+                    <li><strong>Realtime data:</strong> Sync schedules and attendance using Firebase Realtime Database.</li>
+                    <li><strong>Navigation:</strong> Smooth user experience built with SwiftUI components.</li>
+                </ul>
+            </div>
+
+            <div id="impact-punchsync" class="tab-panel">
+                <p>PunchSync transforms the way businesses manage their teams. It reduces administrative overhead, improves time accuracy, and provides real-time insights into workforce activity. With PunchSync, businesses can operate more efficiently and transparently.</p>
             </div>
         </div>
     </div>
