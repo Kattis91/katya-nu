@@ -137,7 +137,7 @@
                         <div class="project-info">
                             <h3>TheCleanApp</h3>
                             <p class="project-info-catch">Make cleaning fun — turn chores into challenges! </p>
-                            <p>TheCleanApp turns boring cleaning tasks into an exciting game for the whole family! Race against the clock, earn points, and enjoy a motivating way to get chores done together. The more you clean, the more rewarding it gets — making everyday tidying fun and enjoyable for everyone. Perfect for families and anyone who wants to get things done with a smile!</p>
+                            <p>TheCleanApp turns boring cleaning tasks into an exciting game for the whole family! Race against the clock, earn points, and enjoy a motivating way to get chores done together. The more you clean, the more rewarding it gets — making everyday tidying fun and enjoyable for everyone. Perfect for families and anyone who wants to get things done with a smile! <p style="cursor: pointer; color: #2a7ae2;" onclick="openModal('thecleanapp')">Read more →</p> 
                             <div class="project-tags">
                                 <span class="project-tag">Android</span>
                                 <span class="project-tag">Kotlin</span>
@@ -359,6 +359,50 @@
 
             <div id="impact-mybudgetbuddy" class="tab-panel">
                 <p>MyBudgetBuddy empowers users to stay on top of their finances with less stress. By combining smart reminders with personalized budgeting tools, the app promotes financial responsibility and helps users form healthy money habits. The use of real-time data and cloud-based notifications ensures a consistent and connected experience across devices.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for TheCleanApp -->
+<div id="thecleanapp-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">TheCleanApp</h2>
+            <button class="close-btn" onclick="closeModal('thecleanapp')">&times;</button>
+        </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('features-clean')">🧼 Key Features</button>
+            <button class="tab-btn" onclick="switchTab('audience-clean')">🎯 Target Audience</button>
+            <button class="tab-btn" onclick="switchTab('technical-clean')">💻 Technical</button>
+            <button class="tab-btn" onclick="switchTab('impact-clean')">✨ Project Impact</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="features-clean" class="tab-panel active">
+                <ul>
+                    <li><strong>Cleaning Tasks:</strong> Complete cleaning tasks within a time frame – play in single or multiplayer mode!</li>
+                    <li><strong>Scoring System:</strong> Earn points based on completed tasks and stay motivated.</li>
+                    <li><strong>Engaging Animations:</strong> Fun visual effects and animated cards make cleaning more exciting.</li>
+                </ul>
+            </div>
+
+            <div id="audience-clean" class="tab-panel">
+                <p>Perfect for families, roommates, or anyone who wants to make cleaning less of a chore and more of a game – whether playing solo or together!</p>
+            </div>
+
+            <div id="technical-clean" class="tab-panel">
+                <ul>
+                    <li><strong>Native Android:</strong> Built entirely with Kotlin for optimized Android performance.</li>
+                    <li><strong>Realtime data:</strong> Firebase Realtime Database stores household and task progress.</li>
+                    <li><strong>Media storage:</strong> Firebase Storage handles images, audio, and notes.</li>
+                    <li><strong>Game modes:</strong> Supports both single player and multiplayer experiences.</li>
+                </ul>
+            </div>
+
+            <div id="impact-clean" class="tab-panel">
+                <p>TheCleanApp turns everyday cleaning into an interactive game. By combining motivation, visual rewards, and friendly competition, it helps users build better cleaning habits while having fun.</p>
             </div>
         </div>
     </div>
