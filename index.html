@@ -89,8 +89,19 @@
                                 <a href="https://play.google.com/store/apps/details?id=com.anonymous.FreshAlert&pcampaignid=web_share" class="btn-secondary">🤖 Google Play</a>
                             </div>
                         </div>
-                        <div class="project-image phone-mockup floating">
-                            <img src="images/FreshAlert-portrait.png" alt="FreshAlert's photo">
+                        <div class="project-image">
+                            <div class="phone-mockup floating" onclick="flipPhone(this)">
+                                <div class="phone-flip-container">
+                                    <!-- FRONT FACE -->
+                                    <div class="phone-front">
+                                        <img src="images/FreshAlert-portrait.png" alt="FreshAlert's photo">
+                                    </div>
+                                    <!-- BACK FACE -->
+                                    <div class="phone-back">
+                                        <img src="images/MyBudgetBuddy-portrait.png" alt="MyBudgetBuddy Features Screen">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="project-item">
@@ -538,6 +549,40 @@
         })
         .catch(error => {
             alert('Oops! There was a problem sending your message.');
+        });
+    });
+
+    function flipPhone(phoneElement) {
+        const flipContainer = phoneElement.querySelector('.phone-flip-container');
+        const isFlipped = flipContainer.classList.contains('flipped');
+        
+        // Add active state
+        phoneElement.classList.add('active');
+        
+        // Toggle flip
+        flipContainer.classList.toggle('flipped');
+        
+        // Remove active state after animation
+        setTimeout(() => {
+            phoneElement.classList.remove('active');
+        }, 800);
+        
+        // Optional: Auto-flip back after 3 seconds
+        if (!isFlipped) {
+            setTimeout(() => {
+                flipContainer.classList.remove('flipped');
+            }, 3000);
+        }
+    }
+
+    // Add touch feedback for mobile
+    document.querySelectorAll('.phone-mockup').forEach(phone => {
+        phone.addEventListener('touchstart', function() {
+            this.style.transform = 'translateY(-5px) scale(0.98)';
+        });
+        
+        phone.addEventListener('touchend', function() {
+            this.style.transform = '';
         });
     });
 </script>
