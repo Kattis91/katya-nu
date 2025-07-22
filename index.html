@@ -115,7 +115,7 @@
                         <div class="project-info">
                             <h3>MyBudgetBuddy</h3>
                             <p class="project-info-catch">Simple, human budgeting — plus bill reminders so you never miss out.</p>
-                            <p>MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.</p>
+                            <p>MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.. <p style="cursor: pointer; color: #2a7ae2;" onclick="openModal('mybudgetbuddy')">Read more →</p> 
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Android</span>
@@ -313,6 +313,52 @@
 
             <div id="impact-punchsync" class="tab-panel">
                 <p>PunchSync transforms the way businesses manage their teams. It reduces administrative overhead, improves time accuracy, and provides real-time insights into workforce activity. With PunchSync, businesses can operate more efficiently and transparently.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for MyBudgetBuddy -->
+<div id="mybudgetbuddy-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">MyBudgetBuddy</h2>
+            <button class="close-btn" onclick="closeModal('mybudgetbuddy')">&times;</button>
+        </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('features-mybudgetbuddy')">🚀 Key Features</button>
+            <button class="tab-btn" onclick="switchTab('audience-mybudgetbuddy')">🎯 Target Audience</button>
+            <button class="tab-btn" onclick="switchTab('technical-mybudgetbuddy')">💻 Technical</button>
+            <button class="tab-btn" onclick="switchTab('impact-mybudgetbuddy')">✨ Project Impact</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="features-mybudgetbuddy" class="tab-panel active">
+                <ul>
+                    <li><strong>Smart invoice reminders:</strong> Receive timely alerts so you never miss a bill again.</li>
+                    <li><strong>Budget cycle alerts:</strong> Get notified before your current budget period ends.</li>
+                    <li><strong>Flexible budgeting:</strong> Create budgets based on monthly, weekly, or custom periods.</li>
+                    <li><strong>Expense tracking:</strong> Track your income and expenses across different categories.</li>
+                    <li><strong>Financial history:</strong> Review past transactions to understand spending habits.</li>
+                </ul>
+            </div>
+
+            <div id="audience-mybudgetbuddy" class="tab-panel">
+                <p>Ideal for anyone who wants to take control of their personal finances — from students and young professionals to families looking for a better way to manage monthly expenses and avoid late payments.</p>
+            </div>
+
+            <div id="technical-mybudgetbuddy" class="tab-panel">
+                <ul>
+                    <li><strong>Native development:</strong> Built with Swift (iOS) and Kotlin (Android) for optimal performance on each platform.</li>
+                    <li><strong>Cross-device syncing:</strong> Firebase Authentication and Realtime Database allow users to access their data from both iOS and Android seamlessly.</li>
+                    <li><strong>Smart notifications:</strong> Firebase Cloud Functions trigger real-time alerts when budget periods are about to expire or invoices are due.</li>
+                    <li><strong>User experience:</strong> Clean and intuitive navigation tailored natively for each platform.</li>
+                </ul>
+            </div>
+
+            <div id="impact-mybudgetbuddy" class="tab-panel">
+                <p>MyBudgetBuddy empowers users to stay on top of their finances with less stress. By combining smart reminders with personalized budgeting tools, the app promotes financial responsibility and helps users form healthy money habits. The use of real-time data and cloud-based notifications ensures a consistent and connected experience across devices.</p>
             </div>
         </div>
     </div>
