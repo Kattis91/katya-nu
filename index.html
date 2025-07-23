@@ -187,7 +187,7 @@
                 </div>
 
                 <div class="contact-methods">
-                    <div class="contact-method" id="sendMessage" onclick="showContactForm()">
+                    <div class="contact-method" onclick="showContactForm()">
                         <h3>💬 Send Message</h3>
                         <p>Get in touch directly - fill out your details</p>
                         <div class="contact-info">Contact Form</div>
@@ -508,10 +508,10 @@
 
     function showContactForm() {
         const form = document.getElementById('contactForm');
-        const sendMessageBox = document.getElementById('sendMessage');
-        
-        // Hide the send message box
-        sendMessageBox.style.display = 'none';
+        const contactMethods = document.querySelector('.contact-methods'); // Hide the whole container
+
+        // Hide the contact methods container
+        contactMethods.style.display = 'none';
         
         // Show the form
         form.classList.add('active');
@@ -524,13 +524,13 @@
 
     function hideContactForm() {
         const form = document.getElementById('contactForm');
-        const sendMessageBox = document.getElementById('sendMessage');
+        const contactMethods = document.querySelector('.contact-methods');
         
         // Hide the form
         form.classList.remove('active');
         
-        // Show the send message box again
-        sendMessageBox.style.display = 'block';
+        // Show the contact methods container again
+        contactMethods.style.display = 'block';
     }
 
     document.getElementById('messageForm').addEventListener('submit', function(e) {
