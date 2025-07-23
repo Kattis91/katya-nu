@@ -174,7 +174,7 @@
                 <h2>Let's Connect</h2>
                 <p>Ready to collaborate or have a project in mind? I'd love to hear from you!</p>
                 <div class="contact-methods">
-                    <div class="contact-method" onclick="showContactForm()">
+                    <div class="contact-method" id="sendMessage" onclick="showContactForm()">
                         <h3>💬 Send Message</h3>
                         <p>Get in touch directly - fill out your details</p>
                         <div class="contact-info">Contact Form</div>
@@ -508,6 +508,12 @@
 
     function showContactForm() {
         const form = document.getElementById('contactForm');
+        const sendMessageBox = document.getElementById('sendMessage');
+        
+        // Hide the send message box
+        sendMessageBox.style.display = 'none';
+        
+        // Show the form
         form.classList.add('active');
         
         // Smooth scroll to form
@@ -518,7 +524,13 @@
 
     function hideContactForm() {
         const form = document.getElementById('contactForm');
+        const sendMessageBox = document.getElementById('sendMessage');
+        
+        // Hide the form
         form.classList.remove('active');
+        
+        // Show the send message box again
+        sendMessageBox.style.display = 'block';
     }
 
     document.getElementById('messageForm').addEventListener('submit', function(e) {
