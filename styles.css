@@ -368,6 +368,45 @@ main {
   }
 }
 
+/* Read More Button */
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(45deg, #5A9B8E, #E8A298);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    position: relative;
+}
+
+.read-more::after {
+ 
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-block;
+}
+
+.read-more:hover {
+    transform: scale(1.05);
+}
+
+.read-more:hover::after {
+    transform: translateX(8px);
+}
+
+.read-more::after {
+  
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+    transform: translateX(4px);
+}
+
 .project-tags {
     margin-bottom: 1.5rem;
 }
