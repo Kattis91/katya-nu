@@ -420,11 +420,13 @@
 </div>
 
 <script src="js/navigation.js"></script>
+<script src="js/contact.js"></script>
 
 <script>
-    
+
     document.addEventListener('DOMContentLoaded', function() {
         initNavigation();
+        initContactForm();
     });
     function switchTab(tabId) {
         // Remove active class from all tab buttons
@@ -461,59 +463,6 @@
             document.body.style.overflow = 'auto';
         }, 300); // Match the CSS transition duration
     }
-
-    function showContactForm() {
-        const form = document.getElementById('contactForm');
-        const contactMethods = document.querySelector('.contact-methods'); // Hide the whole container
-
-        // Hide the contact methods container
-        contactMethods.style.display = 'none';
-        
-        // Show the form
-        form.classList.add('active');
-        
-        // Smooth scroll to form
-        setTimeout(() => {
-            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-    }
-
-    function hideContactForm() {
-        const form = document.getElementById('contactForm');
-        const contactMethods = document.querySelector('.contact-methods');
-        
-        // Hide the form
-        form.classList.remove('active');
-        
-        // Show the contact methods container again
-        contactMethods.style.display = 'block';
-    }
-
-    document.getElementById('messageForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        
-        fetch('https://formspree.io/f/manjrgyb', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                this.reset();
-                hideContactForm();
-            } else {
-                alert('Oops! There was a problem sending your message.');
-            }
-        })
-        .catch(error => {
-            alert('Oops! There was a problem sending your message.');
-        });
-    });
 
     function flipPhone(phoneElement) {
         const flipContainer = phoneElement.querySelector('.phone-flip-container');
