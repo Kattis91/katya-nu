@@ -419,32 +419,13 @@
     </div>
 </div>
 
+<script src="js/navigation.js"></script>
 
 <script>
-    function scrollToProjects() {
-        document.getElementById('projects').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function toggleMobileMenu() {
-        const navLinks = document.getElementById('navLinks');
-        const navOverlay = document.getElementById('navOverlay');
-
-        navLinks.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-    }
-
-    document.getElementById('navOverlay').addEventListener('click', toggleMobileMenu);
-
-    function closeMobileMenu() {
-        const navLinks = document.getElementById('navLinks');
-        const navOverlay = document.getElementById('navOverlay');
-
-        navLinks.classList.remove('active');
-        navOverlay.classList.remove('active');
-    }
-
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        initNavigation();
+    });
     function switchTab(tabId) {
         // Remove active class from all tab buttons
         const tabButtons = document.querySelectorAll('.tab-btn');
@@ -480,36 +461,6 @@
             document.body.style.overflow = 'auto';
         }, 300); // Match the CSS transition duration
     }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const navLinks = document.getElementById('navLinks');
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        
-        if (!navLinks.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
-            navLinks.classList.remove('active');
-        }
-    });
-
-    // Close mobile menu on window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.remove('active');
-        }
-    });
-
-    // Force page to load at top
-    window.addEventListener('load', function() {
-        // Remove any hash from URL
-        if (window.location.hash) {
-            history.replaceState(null, null, window.location.pathname);
-        }
-        // Force scroll to top
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 100);
-    });
 
     function showContactForm() {
         const form = document.getElementById('contactForm');
