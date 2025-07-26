@@ -423,7 +423,6 @@
 <script src="js/contact.js"></script>
 
 <script>
-
     document.addEventListener('DOMContentLoaded', function() {
         initNavigation();
         initContactForm();
@@ -463,40 +462,6 @@
             document.body.style.overflow = 'auto';
         }, 300); // Match the CSS transition duration
     }
-
-    function flipPhone(phoneElement) {
-        const flipContainer = phoneElement.querySelector('.phone-flip-container');
-        const isFlipped = flipContainer.classList.contains('flipped');
-        
-        // Add active state
-        phoneElement.classList.add('active');
-        
-        // Toggle flip
-        flipContainer.classList.toggle('flipped');
-        
-        // Remove active state after animation
-        setTimeout(() => {
-            phoneElement.classList.remove('active');
-        }, 800);
-        
-        // Optional: Auto-flip back after 3 seconds
-        if (!isFlipped) {
-            setTimeout(() => {
-                flipContainer.classList.remove('flipped');
-            }, 3000);
-        }
-    }
-
-    // Add touch feedback for mobile
-    document.querySelectorAll('.phone-mockup').forEach(phone => {
-        phone.addEventListener('touchstart', function() {
-            this.style.transform = 'translateY(-5px) scale(0.98)';
-        });
-        
-        phone.addEventListener('touchend', function() {
-            this.style.transform = '';
-        });
-    });
 </script>
 </body>
 </html>
