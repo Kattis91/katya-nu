@@ -360,6 +360,131 @@ main {
     order: 1;
 }
 
+/* Interactive Screenshot Gallery */
+.screenshot-gallery {
+    position: relative;
+    width: 300px;
+    height: 580px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.phone-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.screenshot.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.screenshot.prev {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.screenshot.next {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Gallery Controls */
+.gallery-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.gallery-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    background: #5A9B8E;
+    transform: scale(1.2);
+}
+
+.gallery-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.gallery-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+}
+
+.screenshot-gallery:hover .gallery-arrow {
+    opacity: 1;
+}
+
+.gallery-arrow:hover {
+    background: rgba(90, 155, 142, 0.8);
+    transform: scale(1.1);
+}
+
+/* Floating Animation with Reduced Intensity */
+.floating-gentle {
+    animation: gentleFloat 8s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
 .projects-content h2 {
     font-size: 2.5rem;
     color: #5A9B8E;

@@ -90,16 +90,26 @@
                             </div>
                         </div>
                         <div class="project-image">
-                            <div class="phone-mockup floating" onclick="flipPhone(this)">
-                                <div class="phone-flip-container">
-                                    <!-- FRONT FACE -->
-                                    <div class="phone-front">
-                                        <img src="images/FreshAlert-portrait.png" alt="FreshAlert's photo">
+                            <div class="screenshot-gallery floating-gentle">
+                                <div class="phone-container">
+                                    <div class="screen">
+                                        <img src="images/FreshAlert-portrait.png" alt="Home Screen" class="screenshot active">
+                                        <img src="images/FreshAlert-notifications.png" alt="Notifications" class="screenshot">
+                                        <img src="images/FreshAlert-expired.png" alt="Expired Tab" class="screenshot">
+                                        <img src="images/FreshAlert-edit.png" alt="Edit Screen" class="screenshot">
                                     </div>
-                                    <!-- BACK FACE -->
-                                    <div class="phone-back">
-                                        <img src="images/MyBudgetBuddy-portrait.png" alt="MyBudgetBuddy Features Screen">
+                                    
+                                    <div class="gallery-arrows">
+                                        <button class="gallery-arrow" id="prevBtn">‹</button>
+                                        <button class="gallery-arrow" id="nextBtn">›</button>
                                     </div>
+                                </div>
+                                
+                                <div class="gallery-controls">
+                                    <div class="gallery-dot active" data-slide="0"></div>
+                                    <div class="gallery-dot" data-slide="1"></div>
+                                    <div class="gallery-dot" data-slide="2"></div>
+                                    <div class="gallery-dot" data-slide="3"></div>
                                 </div>
                             </div>
                         </div>
