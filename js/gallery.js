@@ -12,9 +12,43 @@ class ScreenshotGallery {
     }
     
     init() {
+        // CRITICAL: Detect screenshot type FIRST before other operations
+        this.detectScreenshotType();
         this.updateCounter();
         this.bindEvents();
         this.startAutoplay();
+    }
+    
+    detectScreenshotType() {
+        if (this.screenshots.length > 0) {
+            const firstImg = this.screenshots[0];
+            
+            const checkAspectRatio = () => {
+                if (firstImg.naturalWidth && firstImg.naturalHeight) {
+                    const aspectRatio = firstImg.naturalWidth / firstImg.naturalHeight;
+                    console.log('Screenshot dimensions:', firstImg.naturalWidth, 'x', firstImg.naturalHeight);
+                    console.log('Screenshot aspect ratio:', aspectRatio);
+                    
+                    // Your screenshot appears to be very tall and narrow
+                    // Let's check for height > 2000px OR aspect ratio < 0.5
+                    if (firstImg.naturalHeight > 2000 || aspectRatio < 0.5) {
+                        this.gallery.classList.add('android');
+                        console.log('Added android class for tall screenshot');
+                    } else if (aspectRatio > 0.48) {
+                        this.gallery.classList.add('android');
+                        console.log('Added android class for wider aspect ratio');
+                    } else {
+                        console.log('Using iPhone sizing');
+                    }
+                }
+            };
+
+            if (firstImg.complete) {
+                checkAspectRatio();
+            } else {
+                firstImg.addEventListener('load', checkAspectRatio);
+            }
+        }
     }
     
     bindEvents() {
@@ -79,7 +113,6 @@ class ScreenshotGallery {
             if (index === this.currentSlide) {
                 screenshot.classList.add('active');
             } else {
-                // Always slide from right to left for infinite carousel effect
                 screenshot.classList.add('next');
             }
         });

@@ -307,6 +307,7 @@ main {
 }
 
 /* Projects Section */
+/* Projects Section */
 #projects {
     background: #1A1A1A;
     padding: 4rem 0;
@@ -394,6 +395,19 @@ main {
     opacity: 0;
     transform: translateX(100%) scale(0.95);
     transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.screenshot-gallery.android {
+    width: 280px !important;
+    height: 580px !important;
+}
+
+.screenshot-gallery.android .screen {
+    border-radius: 28px;
+}
+
+.screenshot-gallery.android .screenshot {
+    object-fit: contain !important;
 }
 
 .screenshot.active {
@@ -1412,6 +1426,11 @@ h1, h2 {
         width: 240px;
         height: 480px;
     }
+
+    .screenshot-gallery.android {
+        width: 260px !important;
+        height: 550px !important;
+    }
     
     .gallery-arrow {
         width: 36px;
@@ -1564,6 +1583,11 @@ h1, h2 {
         .screenshot-gallery {
             width: 220px;
             height: 440px;
+        }
+
+        .screenshot-gallery.android {
+            width: 240px !important;
+            height: 500px !important;
         }
 
         .gallery-arrows {
