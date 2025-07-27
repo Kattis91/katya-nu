@@ -433,7 +433,7 @@ main {
     top: 50%;
     transform: translateY(-50%);
     width: calc(100% - 60px);
-    left: 30px;
+    left: 15px;
     display: flex;
     justify-content: space-between;
     pointer-events: none;
@@ -1406,8 +1406,8 @@ h1, h2 {
     }
     
     .gallery-arrows {
-        width: calc(100% - 50px);
-        left: 25px;
+        width: calc(100% - 95px);
+        left: 18px;
     }
     
     .gallery-controls {
