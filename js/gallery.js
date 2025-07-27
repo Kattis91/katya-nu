@@ -7,7 +7,7 @@ class ScreenshotGallery {
         this.nextBtn = this.gallery.querySelector('#nextBtn');
         this.currentSlide = 0;
         this.totalSlides = this.screenshots.length;
-        
+        this.isTransitioning = false;
         this.init();
     }
     
@@ -110,8 +110,10 @@ class ScreenshotGallery {
     }
 }
 
-// Initialize gallery
+// Initialize ALL galleries when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    const gallery = document.querySelector('.screenshot-gallery');
-    new ScreenshotGallery(gallery);
+    const galleries = document.querySelectorAll('.screenshot-gallery');
+    galleries.forEach(gallery => {
+        new ScreenshotGallery(gallery);
+    });
 });
