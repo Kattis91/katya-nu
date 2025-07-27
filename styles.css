@@ -307,7 +307,6 @@ main {
 }
 
 /* Projects Section */
-/* Projects Section */
 #projects {
     background: #1A1A1A;
     padding: 4rem 0;
@@ -368,12 +367,15 @@ main {
     width: 280px;
     height: 560px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .phone-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 60px);
     border-radius: 32px;
 }
 
@@ -426,41 +428,6 @@ main {
 }
 
 /* Gallery Controls */
-.gallery-controls {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 8px 16px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-}
-
-.gallery-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.gallery-dot:hover {
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(1.1);
-}
-
-.gallery-dot.active {
-    background: #5A9B8E;
-    transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(90, 155, 142, 0.5);
-}
-
 .gallery-arrows {
     position: absolute;
     top: 50%;
@@ -1595,10 +1562,6 @@ h1, h2 {
             left: 20px;
         }
 
-        .gallery-controls {
-            bottom: 10px;
-        }
-        
         .project-item {
             padding: 1rem;
             gap: 1.5rem;
