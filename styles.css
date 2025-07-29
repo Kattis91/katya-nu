@@ -771,19 +771,32 @@ main {
 }
 
 .project-info-catch {
-  animation: pulseStronger 4s ease-in-out infinite;
-  color: #2a7ae2;
+    background: linear-gradient(45deg, #2a7ae2, #4a9eff, #1a5bb8, #3d8bff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: modernPulse 3.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(42, 122, 226, 0.3));
 }
 
-@keyframes pulseStronger {
-  0%, 100% {
-    opacity: 1;
-    color: #2a7ae2;
-  }
-  50% {
-    opacity: 0.5;
-    color: #1a5bb8; /* mörkare blå */
-  }
+@keyframes modernPulse {
+    0%, 100% {
+        background-position: 0% 50%;
+        filter: drop-shadow(0 0 8px rgba(42, 122, 226, 0.3));
+    }
+    25% {
+        background-position: 100% 50%;
+        filter: drop-shadow(0 0 15px rgba(42, 122, 226, 0.5));
+    }
+    50% {
+        background-position: 100% 100%;
+        filter: drop-shadow(0 0 20px rgba(42, 122, 226, 0.7));
+    }
+    75% {
+        background-position: 0% 100%;
+        filter: drop-shadow(0 0 12px rgba(42, 122, 226, 0.4));
+    }
 }
 
 /* Read More Button */
