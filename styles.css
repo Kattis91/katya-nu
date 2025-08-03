@@ -8,8 +8,14 @@
   --primary-dark: #2C3E50;
   --primary-teal: #34495E;
   --accent-teal: #5A9B8E;
+   --accent-coral: #E8A298;
   --background-dark: #1A1A1A;
   --card-background: #2C2C2C;
+
+  --teal-glow: #5A9B8E;
+    --coral-glow: #E8A298;
+    --teal-bright: #7BC4B8;
+    --coral-bright: #F4B5A8;
 }
 
 body {
@@ -269,12 +275,6 @@ main {
     align-items: center;
 }
 
-.about-text h2 {
-    font-size: 2.5rem;
-    color: #5A9B8E;
-    margin-bottom: 2rem;
-}
-
 .about-text p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
@@ -310,6 +310,42 @@ main {
 #projects {
     background: #1A1A1A;
     padding: 4rem 0;
+}
+
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, 
+        var(--primary-teal) 0%, 
+        var(--teal-bright) 35%, 
+        var(--accent-coral) 65%, 
+        var(--coral-bright) 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: yourColorFlow 6s ease-in-out infinite;
+    position: relative;
+    filter: drop-shadow(0 0 20px rgba(90, 155, 142, 0.3));
+}
+
+@supports not (-webkit-background-clip: text) {
+    .section-title {
+        background: none;
+        color: var(--primary-teal);
+        -webkit-text-fill-color: unset;
+    }
+}
+
+@keyframes yourColorFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.override-margin {
+  margin-bottom: 2rem !important;
 }
 
 .project-item {
@@ -748,13 +784,6 @@ main {
     75% { 
         transform: translateY(-4px) rotateZ(-0.5deg); 
     }
-}
-
-.projects-content h2 {
-    font-size: 2.5rem;
-    color: #5A9B8E;
-    margin-bottom: 3rem;
-    text-align: center;
 }
 
 .project-info h3 {
