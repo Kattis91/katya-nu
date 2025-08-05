@@ -1549,6 +1549,12 @@ h1, h2 {
     .home-title {
         font-size: 1.4rem;
     }
+
+    .section-title {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
     
     .home-description {
         font-size: 1rem;
