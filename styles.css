@@ -266,6 +266,11 @@ main {
 /* About Section */
 #about {
     background: #2C2C2C;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 2rem;
 }
 
 .about-content {
@@ -273,6 +278,9 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about-text p {
