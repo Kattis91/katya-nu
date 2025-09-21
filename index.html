@@ -74,6 +74,45 @@
                 <div class="projects-grid">
                     <div class="project-item">
                         <div class="project-info">
+                            <h3>TheSecretBehind</h3>
+                            <p class="project-info-catch">Explore exhibitions in new dimensions — both on-site and at home.</p>
+                            <p>The Secret Behind is an art project that transforms how audiences experience exhibitions. 
+                            With AR technology, artworks come alive in new dimensions — both in the gallery and in your own home. 
+                            Preview pieces directly on your walls, explore immersive storytelling, and engage with art beyond traditional boundaries... 
+                            <p class="read-more" onclick="openModal('thesecretbehind')">Discover More</p>
+                            <div class="project-tags">
+                                <span class="project-tag">iOS</span>
+                                <span class="project-tag">Android</span>
+                                <span class="project-tag">Swift</span>
+                                <span class="project-tag">Kotlin</span>
+                                <span class="project-tag">ARKit</span>
+                                <span class="project-tag">ARCore</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://apps.apple.com/se/app/the-secret-behind/id6749782631" class="btn-secondary">🍎 App Store</a>
+                                <a href="https://play.google.com/store/apps/details?id=com.arta.thesecretbehindandroid&pcampaignid=web_share" class="btn-secondary">🤖 Google Play</a>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <div class="screenshot-gallery floating-gentle">
+                                <div class="phone-container">
+                                    <div class="screen">
+                                        <img src="images/TheSecretBehind-splash.png" alt="Splashscreen" class="screenshot active">
+                                        <img src="images/TheSecretBehind-test-on-your-wall.png" alt="Test On Your Wall" class="screenshot">
+                                        <img src="images/TheSecretBehind-about-app.png" alt="About App" class="screenshot">
+                                        <img src="images/TheSecretBehind-about-gallery.png" alt="About Gallery" class="screenshot">
+                                    </div>
+                                    
+                                    <div class="gallery-arrows">
+                                        <button class="gallery-arrow" id="prevBtn">‹</button>
+                                        <button class="gallery-arrow" id="nextBtn">›</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-info">
                             <h3>FreshAlert</h3>
                             <p class="project-info-catch">Smart food management, made simple.</p>
                             <p>FreshAlert is a mobile app that helps users track food expiration dates in a fast and easy way. With smart reminders, filtering, and a clean user interface, the app helps reduce food waste, save money, and simplify everyday meal planning... <p class="read-more" onclick="openModal('freshalert')">Discover More</p>
@@ -465,6 +504,52 @@
         </div>
     </div>
 </div>
+
+<!-- Modal for TheSecretBehind -->
+<div id="thesecretbehind-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">The Secret Behind</h2>
+            <button class="close-btn" onclick="closeModal('thesecretbehind')">&times;</button>
+        </div>
+
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="switchTab('features-thesecretbehind')">🚀 Key Features</button>
+            <button class="tab-btn" onclick="switchTab('audience-thesecretbehind')">🎯 Target Audience</button>
+            <button class="tab-btn" onclick="switchTab('technical-thesecretbehind')">💻 Technical</button>
+            <button class="tab-btn" onclick="switchTab('impact-thesecretbehind')">✨ Project Impact</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="features-thesecretbehind" class="tab-panel active">
+                <ul>
+                    <li><strong>AR exhibition experience:</strong> Explore artworks enhanced with ARCore and ARKit technology.</li>
+                    <li><strong>Test on your wall:</strong> Preview selected artworks directly on your own walls at home.</li>
+                    <li><strong>Immersive storytelling:</strong> The app adds a new dimension to art, connecting digital layers with physical exhibitions.</li>
+                    <li><strong>Multilingual support:</strong> Available in Swedish, English, and Norwegian.</li>
+                </ul>
+            </div>
+
+            <div id="audience-thesecretbehind" class="tab-panel">
+                <p>Created for visitors to selected exhibitions and art enthusiasts curious about experiencing art in new ways. Perfect for anyone who wants to extend the exhibition into their own home or preview artworks in their personal space.</p>
+            </div>
+
+            <div id="technical-thesecretbehind" class="tab-panel">
+                <ul>
+                    <li><strong>Native development:</strong> Built with Swift (iOS) and Kotlin (Android).</li>
+                    <li><strong>AR technology:</strong> Uses ARKit for iOS and ARCore for Android to bring artworks into augmented reality.</li>
+                    <li><strong>Cross-platform:</strong> Optimized for both iOS and Android devices with AR support.</li>
+                    <li><strong>Camera integration:</strong> Requires AR-capable camera hardware for full functionality.</li>
+                </ul>
+            </div>
+
+            <div id="impact-thesecretbehind" class="tab-panel">
+                <p>The Secret Behind expands the boundaries of traditional exhibitions by merging physical and digital experiences. It invites audiences to engage with artworks beyond the gallery space, making art more accessible, personal, and interactive.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script src="js/navigation.js"></script>
 <script src="js/contact.js"></script>
