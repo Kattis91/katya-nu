@@ -339,6 +339,30 @@ main {
     filter: drop-shadow(0 0 20px rgba(90, 155, 142, 0.3));
 }
 
+.project-title {
+    display: flex;
+    align-items: center;   /* centrar båda */
+    gap: 10px;
+}
+
+.project-title img.project-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.project-title h3 {
+    position: relative;
+    top: 8px;
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.2;         
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
 @supports not (-webkit-background-clip: text) {
     .section-title {
         background: none;
