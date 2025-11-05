@@ -13,12 +13,20 @@
             <div class="logo">Katya Durneva Svedmark</div>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             <div class="nav-overlay" id="navOverlay"></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
-                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" data-i18n="home" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="#about" data-i18n="about" onclick="closeMobileMenu()">About</a></li>
+                    <li><a href="#projects" data-i18n="projects" onclick="closeMobileMenu()">Projects</a></li>
+                    <li><a href="#contact" data-i18n="contact" onclick="closeMobileMenu()">Contact</a></li>
+                </ul>
+
+                <!-- Language switcher -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en" onclick="switchLanguage('en')">🇬🇧</button>
+                    <button class="lang-btn" data-lang="sv" onclick="switchLanguage('sv')">🇸🇪</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,10 +40,10 @@
         </div>
         <div class="container">
             <div class="home-content">
-                <div class="home-greeting">Hello, I'm</div>
+                <div class="home-greeting" data-i18n="homeGreeting">Hello, I'm</div>
                 <p class="home-name">Katya</p>
-                <p class="home-title">App Developer in the making</p>
-                <p class="home-description">Turning ideas into elegant mobile solutions that make life easier. Learning by doing - and enjoying the ride.</p>
+                <p class="home-title" data-i18n="homeTitle">App Developer in the making</p>
+                <p class="home-description" data-i18n="homeDescription">Turning ideas into elegant mobile solutions that make life easier. Learning by doing - and enjoying the ride.</p>
             </div>
             <div class="tech-stack">
                 <span class="tech-badge swift">Swift & SwiftUI</span>
@@ -44,7 +52,7 @@
                 <span class="tech-badge firebase">Firebase</span>
             </div>
             <div class="home-cta">
-                <a href="javascript:void(0)" onclick="scrollToProjects()" class="cta-button">View My Work</a>           
+                <a href="javascript:void(0)" onclick="scrollToProjects()" class="cta-button" data-i18n="viewMyWork">View My Work</a>           
             </div>
         </div>
     </section>
@@ -54,10 +62,10 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">About Me</h2>
-                    <p>I'm an app development student interested in creating apps that are intuitive, helpful, and grounded in real user needs.</p>
-                    <p>Right now, I'm doing my internship at <span class="accent-text">E.ON</span>. Beyond coding, I’ve been actively involved in Agile ceremonies like sprint planning, user story refinement, and reviews – gaining experience with tools like Azure DevOps and Jira.</p>
-                    <p>I enjoy working across both <span class="accent-text">iOS and Android platforms</span>, and I'm always curious about how design and code can work together to create a smooth and meaningful user experience.</p>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;" data-i18n="aboutTitle">About Me</h2>
+                    <p data-i18n="aboutDescription1">I'm an app development student interested in creating apps that are intuitive, helpful, and grounded in real user needs.</p>
+                    <p data-i18n="aboutDescription2">I recently completed my 20-week internship (LIA) at <span class="accent-text">E.ON</span> and am currently working on my <span class="accent-text">thesis project</span>. During my internship, beyond coding, I actively took part in Agile ceremonies like sprint planning, user story refinement, and reviews – gaining experience with tools like Azure DevOps and Jira.</p>
+                    <p data-i18n="aboutDescription3">I enjoy working across both <span class="accent-text">iOS and Android platforms</span>, and I'm always curious about how design and code can work together to create a smooth and meaningful user experience.</p>
                 </div>
                 <div class="about-image">
                     <img src="images/profile-image.jpg" alt="Author's photo">
@@ -70,7 +78,7 @@
     <section id="projects">
         <div class="container">
             <div class="projects-content">
-                <h2 class="section-title" style="margin-bottom: 3rem;">My Projects</h2>
+                <h2 class="section-title" style="margin-bottom: 3rem;" data-i18n="projectTitle">My Projects</h2>
                 <div class="projects-grid">
                     <div class="project-item">
                         <div class="project-info">
@@ -78,12 +86,12 @@
                                 <img src="images/TheSecretBehind-icon.png" alt="TheSecretBehind icon" class="project-icon">
                                 <h3>TheSecretBehind</h3>
                             </div>
-                            <p class="project-info-catch">Explore exhibitions in new dimensions — both on-site and at home.</p>
-                            <p>TheSecretBehind is an art project that transforms how audiences experience exhibitions. 
+                            <p class="project-info-catch" data-i18n="theSecretBehindCatch">Explore exhibitions in new dimensions — both on-site and at home.</p>
+                            <p data-i18n="aboutTheSecretBehind">TheSecretBehind is an art project that transforms how audiences experience exhibitions. 
                             With AR technology, artworks come alive in new dimensions — both in the gallery and in your own home. 
                             Preview pieces directly on your walls, explore immersive storytelling, and engage with art beyond traditional boundaries... 
                             The app is currently part of an exhibition at Galleri M, Eslöv and Galleri G, Sandnes, Norway.
-                            <p class="read-more" onclick="openModal('thesecretbehind')">Discover More</p>
+                            <p class="read-more" onclick="openModal('thesecretbehind')" data-i18n="discoverMore">Discover More</p>
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Android</span>
@@ -121,8 +129,8 @@
                                 <img src="images/MyBudgetBuddy-icon.png" alt="MyBudgetBuddy Icon" class="project-icon">
                                 <h3>MyBudgetBuddy</h3>
                             </div>
-                            <p class="project-info-catch">Simple, human budgeting — plus bill reminders so you never miss out.</p>
-                            <p>MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.. <p class="read-more" onclick="openModal('mybudgetbuddy')">Discover More</p>
+                            <p class="project-info-catch" data-i18n="myBudgetBuddyCatch">Simple, human budgeting — plus bill reminders so you never miss out.</p>
+                            <p data-i18n="aboutMyBudgetBuddy">MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.. <p class="read-more" onclick="openModal('mybudgetbuddy')" data-i18n="discoverMore">Discover More</p>
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Android</span>
@@ -161,8 +169,8 @@
                                 <img src="images/FreshAlert-icon.png" alt="FreshAlert icon" class="project-icon">
                                 <h3>FreshAlert</h3>
                             </div>
-                            <p class="project-info-catch">Smart food management, made simple.</p>
-                            <p>FreshAlert is a mobile app that helps users track food expiration dates in a fast and easy way. With smart reminders, filtering, and a clean user interface, the app helps reduce food waste, save money, and simplify everyday meal planning... <p class="read-more" onclick="openModal('freshalert')">Discover More</p>
+                            <p class="project-info-catch" data-i18n="freshAlertCatch">Smart food management, made simple.</p>
+                            <p data-i18n="aboutFreshAlert">FreshAlert is a mobile app that helps users track food expiration dates in a fast and easy way. With smart reminders, filtering, and a clean user interface, the app helps reduce food waste, save money, and simplify everyday meal planning... <p class="read-more" onclick="openModal('freshalert')" data-i18n="discoverMore">Discover More</p>
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Android</span>
@@ -199,8 +207,8 @@
                                 <img src="images/PunchSync-icon.png" alt="PunchSync Icon" class="project-icon">
                                 <h3>PunchSync</h3>
                             </div>
-                            <p class="project-info-catch">Say goodbye to chaotic schedules and missed check-ins — PunchSync brings order to your workforce with just a few taps.</p>
-                            <p>PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team...  <p class="read-more" onclick="openModal('punchsync')">Discover More</p>
+                            <p class="project-info-catch" data-i18n="punchSyncCatch">Say goodbye to chaotic schedules and missed check-ins — PunchSync brings order to your workforce with just a few taps.</p>
+                            <p data-i18n="aboutPunchSync">PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team...  <p class="read-more" onclick="openModal('punchsync')" data-i18n="discoverMore">Discover More</p>
                             <div class="project-tags">
                                 <span class="project-tag">iOS</span>
                                 <span class="project-tag">Swift</span>
@@ -234,8 +242,8 @@
                                 <img src="images/TheCleanApp-icon.png" alt="TheCleanApp icon" class="project-icon">
                                 <h3>TheCleanApp</h3>
                             </div>
-                            <p class="project-info-catch">Make cleaning fun — turn chores into challenges! </p>
-                            <p>TheCleanApp turns boring cleaning tasks into an exciting game for the whole family! Race against the clock, earn points, and enjoy a motivating way to get chores done together. The more you clean, the more rewarding it gets — making everyday tidying fun and enjoyable for everyone. Perfect for families and anyone who wants to get things done with a smile! <p class="read-more" onclick="openModal('thecleanapp')">Discover More</p>
+                            <p class="project-info-catch" data-i18n="theCleanAppCatch">Make cleaning fun — turn chores into challenges! </p>
+                            <p data-i18n="aboutTheCleanApp">TheCleanApp turns boring cleaning tasks into an exciting game for the whole family! Race against the clock, earn points, and enjoy a motivating way to get chores done together. The more you clean, the more rewarding it gets — making everyday tidying fun and enjoyable for everyone. Perfect for families and anyone who wants to get things done with a smile! <p class="read-more" onclick="openModal('thecleanapp')" data-i18n="discoverMore">Discover More</p>
                             <div class="project-tags">
                                 <span class="project-tag">Android</span>
                                 <span class="project-tag">Kotlin</span>
@@ -278,8 +286,8 @@
         </div>
         <div class="container">
             <div class="contact-content">
-                <h2 class="section-title">Let's Connect</h2>
-                <p>Ready to collaborate or have a project in mind? I'd love to hear from you!</p>
+                <h2 class="section-title" data-i18n="contactTitle">Let's Connect</h2>
+                <p data-i18n="collaborate">Ready to collaborate or have a project in mind? I'd love to hear from you!</p>
                 <div class="social-links">
                     <a href="https://github.com/Kattis91" target="_blank" class="social-link">
                         <span>🐙</span> GitHub
@@ -290,48 +298,48 @@
                 </div>
 
                  <div class="divider">
-                    <p>or send me a message</p>
+                    <p data-i18n="orSendMeAMessage">or send me a message</p>
                 </div>
 
                 <div class="contact-methods">
                     <div class="contact-method" onclick="showContactForm()">
-                        <h3>💬 Send Message</h3>
-                        <p>Get in touch directly - fill out your details</p>
-                        <div class="contact-info">Contact Form</div>
+                        <h3 data-i18n="sendMessageTitle">💬 Send Message</h3>
+                        <p data-i18n="getInTouch">Get in touch directly - fill out your details</p>
+                        <div class="contact-info" data-i18n="contactForm">Contact Form</div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div class="contact-form" id="contactForm">
                     <div class="form-header">
-                        <h3>Send me a message</h3>
-                        <p>I'll get back to you within 48 hours</p>
+                        <h3 data-i18n="sendMeAMessage">Send me a message</h3>
+                        <p data-i18n="getBackToYou">I'll get back to you within 48 hours</p>
                     </div>
                     
                     <form id="messageForm" action="https://formspree.io/f/manjrgyb" method="POST">
                         <div class="form-group">
-                            <label for="name">Name *</label>
+                            <label for="name" data-i18n="name">Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email" data-i18n="email">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Subject *</label>
+                            <label for="subject" data-i18n="subject">Subject *</label>
                             <input type="text" id="subject" name="subject" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" required placeholder="Tell me about your project or just say hello!"></textarea>
+                            <label for="message" data-i18n="message">Message *</label>
+                            <textarea id="message" name="message" data-i18n-placeholder="messagePlaceholder" required placeholder="Tell me about your project or just say hello!"></textarea>
                         </div>
                         
                         <div class="form-actions">
-                            <button type="submit" class="btn submit-btn">Send Message</button>
-                            <button type="button" class="btn cancel-btn" onclick="hideContactForm()">Cancel</button>
+                            <button type="submit" class="btn submit-btn" data-i18n="sendButton">Send Message</button>
+                            <button type="button" class="btn cancel-btn" data-i18n="cancelButton" onclick="hideContactForm()">Cancel</button>
                         </div>
                     </form>
                 </div>
@@ -571,6 +579,7 @@
 <script src="js/contact.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/gallery.js"></script>
+<script src="js/translations.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
