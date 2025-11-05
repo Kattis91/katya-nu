@@ -25,6 +25,8 @@ const translations = {
         discoverMore: "Discover More",
         myBudgetBuddyCatch: "Simple, human budgeting — plus bill reminders so you never miss out.",
         aboutMyBudgetBuddy: "MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.. ",
+        freshAlertCatch: "Smart food management, made simple",
+        aboutFreshAlert: "FreshAlert is a mobile app that helps users track food expiration dates in a fast and easy way. With smart reminders, filtering, and a clean user interface, the app helps reduce food waste, save money, and simplify everyday meal planning... ",
     
         // Contact section
         contactTitle: "Let's connect",
@@ -67,6 +69,8 @@ const translations = {
         discoverMore: "Upptäck Mer",
         myBudgetBuddyCatch: "Enkel budgetering – med påminnelser så du aldrig missar en räkning",
         aboutMyBudgetBuddy: "MyBudgetBuddy hjälper dig att ha kontroll över din ekonomi med smarta fakturapåminnelser och flexibla budgetverktyg. Följ dina utgifter, få notiser innan räkningar förfaller och anpassa dina budgetperioder efter din livsstil. Ingen stress, inga överraskningar – bara ett enklare sätt att hantera din ekonomi.",
+        freshAlertCatch: "Mindre matsvinn, mer kontroll",
+        aboutFreshAlert: "FreshAlert är en mobilapp som hjälper dig att hålla koll på bäst före-datum på ett snabbt och smidigt sätt. Med smarta påminnelser, filtrering och en ren användarupplevelse hjälper appen dig att minska matsvinn, spara pengar och förenkla den dagliga måltidsplaneringen. ",
 
         // Contact section
         contactTitle: "Ta contact",
