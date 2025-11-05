@@ -48,6 +48,14 @@ function switchLanguage(lang) {
             element.innerHTML = translations[lang][key];
         }
     });
+
+    // För placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+            element.setAttribute('placeholder', translations[lang][key]);
+        }
+    });
     
     // Uppdatera active state på knapparna
     document.querySelectorAll('.lang-btn').forEach(btn => {

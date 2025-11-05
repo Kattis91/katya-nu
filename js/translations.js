@@ -31,7 +31,7 @@ const translations = {
         email: "Email *",
         subject: "Subject *",
         message: "Message *",
-        placeholder: "Tell me about your project or just say hello!"
+        messagePlaceholder: "Tell me about your project or just say hello!"
     },
     sv: {
         // Navigation
@@ -65,6 +65,6 @@ const translations = {
         email: "Mejl *",
         subject: "Ämne *",
         message: "Meddelande *",
-        placeholder: "Berätta om ditt projekt eller bara säg hej!"
+        messagePlaceholder: "Berätta om ditt projekt eller bara säg hej!"
     }
 };
