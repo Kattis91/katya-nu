@@ -45,7 +45,9 @@ const translations = {
         email: "Email *",
         subject: "Subject *",
         message: "Message *",
-        messagePlaceholder: "Tell me about your project or just say hello!"
+        messagePlaceholder: "Tell me about your project or just say hello!",
+        sendButton: "Send Message",
+        cancelButton: "Cancel"
     },
     sv: {
         // Navigation
@@ -93,6 +95,8 @@ const translations = {
         email: "Mejl *",
         subject: "Ämne *",
         message: "Meddelande *",
-        messagePlaceholder: "Berätta om ditt projekt eller bara säg hej!"
+        messagePlaceholder: "Berätta om ditt projekt eller bara säg hej!",
+        sendButton: "Skicka ett meddelande",
+        cancelButton: "Avbryt"
     }
 };
