@@ -18,6 +18,12 @@ const translations = {
         aboutDescription2: "I recently completed my 20-week internship at <span class='accent-text'>E.ON</span> and am currently working on my <span class='accent-text'>thesis project</span>. During my internship, beyond coding, I actively took part in Agile ceremonies like sprint planning, user story refinement, and reviews – gaining experience with tools like Azure DevOps and Jira.",
         aboutDescription3: "I enjoy working across both <span class='accent-text'>iOS and Android platforms</span>, and I'm always curious about how design and code can work together to create a smooth and meaningful user experience.",
 
+        // Project Section
+        projectTitle: "My Projects",
+        theSecretBehindCatch: "Explore exhibitions in new dimensions — both on-site and at home.",
+        aboutTheSecretBehind: "TheSecretBehind is an art project that transforms how audiences experience exhibitions. With AR technology, artworks come alive in new dimensions — both in the gallery and in your own home. Preview pieces directly on your walls, explore immersive storytelling, and engage with art beyond traditional boundaries... The app is currently part of an exhibition at Galleri M, Eslöv and Galleri G, Sandnes, Norway.",
+        discoverMore: "Discover More",
+    
         // Contact section
         contactTitle: "Let's connect",
         collaborate: "Ready to collaborate or have a project in mind? I'd love to hear from you!",
@@ -51,6 +57,12 @@ const translations = {
         aboutDescription1: "Jag studerar apputveckling och brinner för att skapa appar som är intuitiva och baserade på verkliga användarbehov.",
         aboutDescription2: "Jag har nyligen avslutat min 20 veckor långa LIA på <span class='accent-text'>E.ON</span> och skriver just nu <span class='accent-text'>mitt examensarbete</span>. Under praktiken deltog jag, utöver själva kodandet, aktivt i agila ceremonier som sprintplanering, refinement och review, och fick erfarenhet av verktyg som Azure DevOps och Jira.",
         aboutDescription3: "Jag tycker om att arbeta med både <span class='accent-text'>iOS och Android</span>, och är alltid nyfiken på hur design och kod kan samverka för att skapa en smidig och meningsfull användarupplevelse.",
+
+        // Project section
+        projectTitle: "Mina Projekt",
+        theSecretBehindCatch: "Utforska utställningar i nya dimensioner — både på plats och hemifrån.",
+        aboutTheSecretBehind: "TheSecretBehind är ett konstprojekt som förvandlar sättet vi upplever utställningar på. Med AR-teknologi väcks konstverken till liv i nya dimensioner – både i galleriet och i ditt eget hem. Förhandsgranska verken direkt på dina väggar, utforska fördjupande berättelser och upplev konsten bortom de traditionella gränserna. Appen är för närvarande en del av en utställning på Galleri M i Eslöv och Galleri G i Sandnes, Norge.",
+        discoverMore: "Upptäck Mer",
 
         // Contact section
         contactTitle: "Ta contact",
