@@ -24,6 +24,40 @@ function scrollToProjects() {
     });
 }
 
+// Nuvarande språk (hämta från localStorage eller defaulta till engelska)
+let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+// Initiera språk vid sidladdning
+document.addEventListener('DOMContentLoaded', function() {
+    initNavigation();
+    switchLanguage(currentLang);
+});
+
+// Funktion för att byta språk
+function switchLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Uppdatera HTML lang-attribut
+    document.documentElement.lang = lang;
+    
+    // Uppdatera alla element med data-i18n attribut
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+    
+    // Uppdatera active state på knapparna
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+}
+
 // Event listeners for navigation
 function initNavigation() {
     // Close mobile menu when clicking overlay
