@@ -87,6 +87,35 @@ main {
     margin-top: 70px;
 }
 
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid rgba(90, 155, 142, 0.3);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    border-color: var(--accent-teal);
+    background: rgba(90, 155, 142, 0.1);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    border-color: var(--accent-teal);
+    background: linear-gradient(135deg, rgba(90, 155, 142, 0.2), rgba(232, 162, 152, 0.2));
+    box-shadow: 0 4px 12px rgba(90, 155, 142, 0.3);
+}
+
 /* Hero Section */
 #home {
     position: relative;
