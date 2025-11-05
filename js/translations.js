@@ -27,6 +27,8 @@ const translations = {
         aboutMyBudgetBuddy: "MyBudgetBuddy helps you stay in control of your money with smart invoice reminders and flexible budgeting tools. Track expenses, get notified before bills are due, and customize your budget cycles to fit your lifestyle. No stress, no surprises — just a simpler way to manage your finances.. ",
         freshAlertCatch: "Smart food management, made simple",
         aboutFreshAlert: "FreshAlert is a mobile app that helps users track food expiration dates in a fast and easy way. With smart reminders, filtering, and a clean user interface, the app helps reduce food waste, save money, and simplify everyday meal planning... ",
+        punchSyncCatch: "Say goodbye to chaotic schedules and missed check-ins — PunchSync brings order to your workforce with just a few taps.",
+        aboutPunchSync: "PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team...",
     
         // Contact section
         contactTitle: "Let's connect",
@@ -71,6 +73,8 @@ const translations = {
         aboutMyBudgetBuddy: "MyBudgetBuddy hjälper dig att ha kontroll över din ekonomi med smarta fakturapåminnelser och flexibla budgetverktyg. Följ dina utgifter, få notiser innan räkningar förfaller och anpassa dina budgetperioder efter din livsstil. Ingen stress, inga överraskningar – bara ett enklare sätt att hantera din ekonomi.",
         freshAlertCatch: "Mindre matsvinn, mer kontroll",
         aboutFreshAlert: "FreshAlert är en mobilapp som hjälper dig att hålla koll på bäst före-datum på ett snabbt och smidigt sätt. Med smarta påminnelser, filtrering och en ren användarupplevelse hjälper appen dig att minska matsvinn, spara pengar och förenkla den dagliga måltidsplaneringen. ",
+        punchSyncCatch: "Säg hejdå till röriga scheman och missade incheckningar – PunchSync skapar ordning i teamet med bara några tryck.",
+        aboutPunchSync: "En smart app som hjälper chefer att hålla ordning och medarbetare att hålla koll – med allt från schemaläggning till incheckningar i realtid och tidrapportering. Oavsett om du driver ett café, en butik eller ett distansteam gör PunchSync det enkelt att hålla koll på allt.",
 
         // Contact section
         contactTitle: "Ta contact",
