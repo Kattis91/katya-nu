@@ -349,6 +349,11 @@ main {
     font-weight: bold;
 }
 
+.accent-name {
+    color: #5fb3a3;
+    font-weight: bold;
+}
+
 /* Projects Section */
 #projects {
     background: #1A1A1A;
