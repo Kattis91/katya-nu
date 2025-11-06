@@ -1246,9 +1246,22 @@ main {
     background-color: #404040;
 }
 
+.tab-btn:last-child {
+    border-top: 1px solid #444;
+    background-color: #2a2a2a;
+}
+
+.tab-btn:last-child:hover {
+    background-color: #383838;
+}
+
+.tab-btn:last-child.active {
+    background-color: #383838;
+}
+
 .tab-content {
     padding: 30px;
-    max-height: 400px;
+    height: 250px;
     overflow-y: auto;
     font-size: 1.1rem;
 }
