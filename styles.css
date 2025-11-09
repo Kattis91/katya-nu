@@ -1301,10 +1301,7 @@ main {
 }
 
 /* Coming Soon Project Styling */
-.project-item.coming-soon {
-    background: linear-gradient(135deg, rgba(44, 44, 44, 0.9) 0%, rgba(58, 44, 58, 0.9) 100%);
-    border: 1px solid rgba(255, 182, 193, 0.2);
-}
+
 
 .project-item.coming-soon::before {
     content: '';
@@ -1340,6 +1337,7 @@ main {
     color: #ffc4d0;
     font-size: 0.85rem;
     padding: 6px 14px;
+    margin-left: 10px;
     border-radius: 20px;
     font-weight: 600;
     animation: badgePulse 2s ease-in-out infinite;
@@ -1355,6 +1353,15 @@ main {
         transform: scale(1.05);
         box-shadow: 0 0 20px 5px rgba(255, 182, 193, 0.2);
     }
+}
+
+.project-tag-coming-soon {
+    background: rgba(255, 182, 193, 0.2);
+    color: #ffc4d0;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 182, 193, 0.3);
 }
 
 .coming-soon-visual {
