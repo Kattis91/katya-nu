@@ -31,6 +31,10 @@ const translations = {
         aboutPunchSync: "PunchSync is a smart and flexible employee management app designed for modern teams. From shift planning to real-time check-ins and time tracking, it helps managers stay organized and employees stay on track — whether you're running a café, retail shop, or remote team...",
         theCleanAppCatch: "Make cleaning fun — turn chores into challenges!",
         aboutTheCleanApp: "TheCleanApp turns boring cleaning tasks into an exciting game for the whole family! Race against the clock, earn points, and enjoy a motivating way to get chores done together. The more you clean, the more rewarding it gets — making everyday tidying fun and enjoyable for everyone. Perfect for families and anyone who wants to get things done with a smile!",
+        comingSoon: "Coming Soon",
+        upcomingAppCatch: "Bridging language gaps — one phrase at a time.",
+        aboutUpcomingApp: "A multilingual phrase library app for <strong>Språkservice</strong>, enabling basic communication before deciding if an interpreter is needed. Built with offline architecture for seamless use anywhere.",
+        launchingSoon: "Launching Soon",
     
         // Contact section
         contactTitle: "Let's connect",
@@ -81,6 +85,10 @@ const translations = {
         aboutPunchSync: "En smart app som hjälper chefer att hålla ordning och medarbetare att hålla koll – med allt från schemaläggning till incheckningar i realtid och tidrapportering. Oavsett om du driver ett café, en butik eller ett distansteam gör PunchSync det enkelt att hålla koll på allt.",
         theCleanAppCatch: "Gör städningen rolig – förvandla sysslor till utmaningar!",
         aboutTheCleanApp: "TheCleanApp gör tråkiga städuppgifter till ett spännande spel för hela familjen! Tävla mot klockan, samla poäng och hitta ett motiverande sätt att fixa sysslorna tillsammans. Ju mer du städar, desto roligare blir det – vilket gör vardagsstädningen både kul och belönande för alla. Perfekt för familjer och alla som vill få saker gjorda med ett leende!",
+        upcomingAppCatch: "Bygger broar mellan språk — en fras i taget.",
+        aboutUpcomingApp: "En flerspråkig frasapp för Språkservice som möjliggör enkel grundkommunikation innan behovet av tolk bedöms. Utvecklad med offline-arkitektur för smidig användning var som helst.",
+        comingSoon: "Kommer Snart",
+        launchingSoon: "Lanseras Snart",
 
         // Contact section
         contactTitle: "Ta contact",
