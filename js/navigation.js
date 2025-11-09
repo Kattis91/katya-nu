@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function switchLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('preferredLanguage', lang);
+
+    // Close mobile menu when switching language
+    closeMobileMenu();
     
     // Uppdatera HTML lang-attribut
     document.documentElement.lang = lang;
